@@ -15,7 +15,7 @@
 // A potential enhancement to NORM would be to allow tracking of multiple remote senders
 // with the same NormNodeId but different instanceIds ...
 
-// BUILD: (assumes "normApi.h" in "include" ...
+// BUILD: (assumes "norm.h" in "include" ...
 // g++ -I../include -o normServer normServer.cpp normSocket.cpp ../lib/libnorm.a ../protolib/lib/libprotokit.a -lresolv
 
 
@@ -31,7 +31,7 @@
 //    threads or event thread-pooling versions of this could be implemented for
 //    performance or application design purposes.  A future version of the NORM API and
 //    this could even provide for very "socket-like" API calls where each "client"
-//    session has its own descriptor independent of threading (e.g. a "normSocket.h" API
+//    session has its own descriptor independent of threading (e.g. a "norm/normSocket.h" API
 //    that is  implemented around the current low level NORM API).  This sort of "NORM
 //    socket" approach could be supported for unicast and SSM streams without too much
 //    difficulty.
@@ -41,7 +41,7 @@
 #include <map>          // for std::map<>
 #include <assert.h>     // more obvious
 
-#include "normSocket.h"
+#include "norm/normSocket.h"
 #ifdef WIN32
 #include "win32InputHandler.cpp"  // to include full implementation
 #include <Winsock2.h>             // for inet_ntoa()

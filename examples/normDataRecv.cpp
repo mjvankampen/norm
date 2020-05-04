@@ -23,9 +23,9 @@
 //  3) The program also will exit on <CTRL-C> from user
 //  4) "normDataRecv" should be started before "normFileSend"
 
-#include "normApi.h"     // for NORM API
+#include "norm.h"     // for NORM API
 
-#include "normMessage.h"
+#include "norm/normMessage.h"
 
 #include "protokit/protoAddress.h"  // for ProtoAddress for easy mcast test
 

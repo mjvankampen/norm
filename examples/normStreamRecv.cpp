@@ -23,7 +23,7 @@
 //  3) This example is designed to receive a single stream from a single sender (could be modified
 //     to support multiple streams and/or senders)
 
-#include "normApi.h"     // for NORM API
+#include "norm.h"     // for NORM API
 
 #include <stdio.h>       // for printf(), etc
 #include <stdlib.h>      // for srand()

@@ -22,21 +22,22 @@ endif()
 
 # List header files
 list(APPEND PUBLIC_HEADER_FILES
-            include/galois.h
-            include/normApi.h
-            include/normEncoder.h
-            include/normEncoderMDP.h
-            include/normEncoderRS16.h
-            include/normEncoderRS8.h
-            include/normFile.h
-            include/normMessage.h
-            include/normNode.h
-            include/normObject.h
-            include/normPostProcess.h
-            include/normSegment.h
-            include/normSession.h
-            include/normSimAgent.h
-            include/normVersion.h
+            include/norm/galois.h
+            include/norm/normApi.h
+            include/norm/normEncoder.h
+            include/norm/normEncoderMDP.h
+            include/norm/normEncoderRS16.h
+            include/norm/normEncoderRS8.h
+            include/norm/normFile.h
+            include/norm/normMessage.h
+            include/norm/normNode.h
+            include/norm/normObject.h
+            include/norm/normPostProcess.h
+            include/norm/normSegment.h
+            include/norm/normSession.h
+            include/norm/normSimAgent.h
+            include/norm/normVersion.h
+            include/norm.h
 )
 
 # List platform-independent source files
@@ -72,7 +73,7 @@ add_library(norm ${PLATFORM_SOURCE_FILES} ${COMMON_SOURCE_FILES} ${PUBLIC_HEADER
 target_link_libraries(norm PRIVATE ${PLATFORM_LIBS} protokit::protokit)
 target_compile_definitions(norm PUBLIC ${PLATFORM_DEFINITIONS})
 target_compile_options(norm PUBLIC ${PLATFORM_FLAGS})
-target_include_directories(norm PRIVATE ${CMAKE_CURRENT_BINARY_DIR})
+target_include_directories(norm PRIVATE ${CMAKE_CURRENT_BINARY_DIR} ${CMAKE_CURRENT_LIST_DIR}/include/norm)
 target_include_directories(norm PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include> $<INSTALL_INTERFACE:include>)
 
 # Install target

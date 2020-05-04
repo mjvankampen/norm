@@ -1,5 +1,5 @@
 
-#include "normApi.h"
+#include "norm.h"
 #include <unistd.h>      // for read() and write()
 #include <stdio.h>       // for printf(), etc
 #include <stdlib.h>      // for srand()

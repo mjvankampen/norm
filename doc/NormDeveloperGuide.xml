@@ -464,7 +464,7 @@
     <title>Build Notes</title>
 
     <para>To build applications that use the NORM library, a path to the
-    "normApi.h" header file must be provided and the linker step needs to
+    "norm.h" header file must be provided and the linker step needs to
     reference the NORM library file ("<filename>libnorm.a</filename>" for Unix
     platforms and "<filename>Norm.lib</filename>" for Win32 platforms). NORM
     also depends upon the NRL Protean Protocol Prototyping toolkit "Protokit"
@@ -851,9 +851,9 @@
 
         <para>The use and interpretation of these values is given in the
         descriptions of <link
-        linkend="NormStreamFlush"><literal>NormStreamFlush()</literal></link>
+        linkend="norm/normStreamFlu.h"><literal>NormStreamFlush()</literal></link>
         and <link
-        linkend="NormStreamSetAutoFlush"><literal>NormStreamSetAutoFlush()</literal></link>
+        linkend="norm/normStreamSetAutoFlu.h"><literal>NormStreamSetAutoFlush()</literal></link>
         functions.</para>
       </sect3>
 
@@ -4066,7 +4066,7 @@ unsigned int <link linkend="NormStreamWrite"><literal>NormStreamWrite</literal><
         </sect4>
       </sect3>
 
-      <sect3 id="NormStreamFlush">
+      <sect3 id="norm/normStreamFlu.h">
         <title>NormStreamFlush()</title>
 
         <sect4>
@@ -4074,7 +4074,7 @@ unsigned int <link linkend="NormStreamWrite"><literal>NormStreamWrite</literal><
 
           <programlisting>#include &lt;normApi.h&gt;
 
-void <link linkend="NormStreamFlush"><literal>NormStreamFlush</literal></link>(<link
+void <link linkend="norm/normStreamFlu.h"><literal>NormStreamFlush</literal></link>(<link
               linkend="NormObjectHandle"><literal>NormObjectHandle</literal></link> streamHandle,
                      bool             eom = false,
                      <link linkend="NormFlushMode"><literal>NormFlushMode</literal></link>    flushMode = <literal>NORM_FLUSH_PASSIVE</literal>);</programlisting>
@@ -4086,7 +4086,7 @@ void <link linkend="NormStreamFlush"><literal>NormStreamFlush</literal></link>(<
           <para>This function causes an immediate "flush" of the transmit
           stream specified by the <parameter>streamHandle</parameter>
           parameter. Normally, unless <link
-          linkend="NormStreamSetAutoFlush"><literal>NormStreamSetAutoFlush()</literal></link>
+          linkend="norm/normStreamSetAutoFlu.h"><literal>NormStreamSetAutoFlush()</literal></link>
           has been invoked, the NORM protocol engine buffers data written to a
           stream until it has accumulated a sufficient quantity to generate a
           <literal>NORM_DATA</literal> message with a full payload (as
@@ -4098,7 +4098,7 @@ void <link linkend="NormStreamFlush"><literal>NormStreamFlush</literal></link>(<
           may not wish wait for such accumulation when critical data has been
           written to a stream. The default stream "flush" operation invoked
           via <link
-          linkend="NormStreamFlush"><literal>NormStreamFlush()</literal></link>
+          linkend="norm/normStreamFlu.h"><literal>NormStreamFlush()</literal></link>
           for <parameter>flushMode</parameter> equal to
           <literal>NORM_FLUSH_PASSIVE</literal> causes NORM to immediately
           transmit all enqueued data for the stream (subject to session
@@ -4144,7 +4144,7 @@ void <link linkend="NormStreamFlush"><literal>NormStreamFlush</literal></link>(<
         </sect4>
       </sect3>
 
-      <sect3 id="NormStreamSetAutoFlush">
+      <sect3 id="norm/normStreamSetAutoFlu.h">
         <title>NormStreamSetAutoFlush()</title>
 
         <sect4>
@@ -4152,7 +4152,7 @@ void <link linkend="NormStreamFlush"><literal>NormStreamFlush</literal></link>(<
 
           <programlisting>#include &lt;normApi.h&gt;
 
-void <link linkend="NormStreamSetAutoFlush"><literal>NormStreamSetAutoFlush</literal></link>(<link
+void <link linkend="norm/normStreamSetAutoFlu.h"><literal>NormStreamSetAutoFlush</literal></link>(<link
               linkend="NormObjectHandle"><literal>NormObjectHandle</literal></link> streamHandle
                             <link linkend="NormFlushMode"><literal>NormFlushMode</literal></link>    flushMode);</programlisting>
         </sect4>
@@ -4164,7 +4164,7 @@ void <link linkend="NormStreamSetAutoFlush"><literal>NormStreamSetAutoFlush</lit
           stream indicated by the <parameter>streamHandle</parameter>
           parameter. By default, a NORM transmit stream is "flushed" only when
           explicitly requested by the application (see <link
-          linkend="NormStreamFlush"><literal>NormStreamFlush()</literal></link>).
+          linkend="norm/normStreamFlu.h"><literal>NormStreamFlush()</literal></link>).
           However, to simplify programming, the NORM API allows that automated
           flushing be enabled such that the "flush" operation occurs every
           time the full requested buffer provided to a <link
@@ -4182,7 +4182,7 @@ void <link linkend="NormStreamSetAutoFlush"><literal>NormStreamSetAutoFlush</lit
           <literal>NORM_FLUSH_ACTIVE</literal>. The default setting for a NORM
           stream is <literal>NORM_FLUSH_NONE</literal> where no flushing
           occurs unless explicitly requested via <link
-          linkend="NormStreamFlush"><literal>NormStreamFlush()</literal></link>.
+          linkend="norm/normStreamFlu.h"><literal>NormStreamFlush()</literal></link>.
           By setting the automated <parameter>flushMode</parameter> to
           <literal>NORM_FLUSH_PASSIVE</literal>, the only action taken is to
           immediately transmit any data that has been written to the stream,
@@ -5935,7 +5935,7 @@ bool <link linkend="NormObjectHasInfo"><literal>NormObjectHasInfo</literal></lin
         </sect4>
       </sect3>
 
-      <sect3 id="NormObjectGetInfoLength">
+      <sect3 id="norm/normObjectGetInfoLeng.h">
         <title>NormObjectGetInfoLength()</title>
 
         <sect4>
@@ -5943,7 +5943,7 @@ bool <link linkend="NormObjectHasInfo"><literal>NormObjectHasInfo</literal></lin
 
           <programlisting>#include &lt;normApi.h&gt;
 
-unsigned short <link linkend="NormObjectGetInfoLength"><literal>NormObjectGetInfoLength</literal></link>(<link
+unsigned short <link linkend="norm/normObjectGetInfoLeng.h"><literal>NormObjectGetInfoLength</literal></link>(<link
               linkend="NormObjectHandle"><literal>NormObjectHandle</literal></link> objectHandle);</programlisting>
         </sect4>
 

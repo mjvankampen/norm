@@ -1,5 +1,5 @@
 
-#include "normApi.h"
+#include "norm.h"
 #include <stdio.h>       // for printf(), etc
 #include <stdlib.h>      // for atoi(), etc
 

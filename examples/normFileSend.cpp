@@ -23,7 +23,7 @@
 //  3) NORM receiver should be started first (before sender starts)
 
 
-#include "normApi.h"     // for NORM API
+#include "norm.h"     // for NORM API
 
 #include "protokit/protoDefs.h"   // for ProtoSystemTime()       
 #include "protokit/protoDebug.h"  // for SetDebugLevel(), etc   

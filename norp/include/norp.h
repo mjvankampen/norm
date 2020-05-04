@@ -6,7 +6,7 @@
 #include "protokit/protoTree.h"
 #include "protoDispatcher.h"
 #include "protoPktSOCKS.h"
-#include "normApi.h"
+#include "norm.h"
 
 class Norp;
 

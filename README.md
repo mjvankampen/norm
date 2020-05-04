@@ -44,7 +44,7 @@ The following items can be built from this source code release:
    Norm.lib  - static NORM protocol library for Win32 platforms
 
  (These libraries can be used by applications using the NORM API.
-  The file "normApi.h" provides function prototypes for NORM API
+  The file "norm.h" provides function prototypes for NORM API
   calls and the included "Norm Developer's Guide" provides a
   reference manual for NORM application development using this
   API.  Additional tutorial material and API usage examples will

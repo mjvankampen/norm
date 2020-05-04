@@ -33,7 +33,7 @@ associate a separate NormInstance (and hence separate descriptor) with each Norm
 listending, connected or accepted if desired.  
 
 As the NormSocket API extension matures, more examples and documentation will be provided as well as
-incorporating it (possibly directly) into the "normApi.h" header file and NORM library.  At the moment,
+incorporating it (possibly directly) into the "norm.h" header file and NORM library.  At the moment,
 "examples/normClient.cpp" and "examples/normServer.cpp" illustrate (and test) basic usage of the API. 
 The "normServer" can be run as a unicast server using the syntax:
 

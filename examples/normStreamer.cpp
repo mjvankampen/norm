@@ -1,5 +1,5 @@
 
-#include "normApi.h"
+#include "norm.h"
 #include "protokit/protoSocket.h"
 
 #include <stdio.h>       // for printf(), etc

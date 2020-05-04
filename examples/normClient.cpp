@@ -1,4 +1,4 @@
-#include "normSocket.h"
+#include "norm/normSocket.h"
 #include <stdio.h>
 #include <string.h>
 
@@ -11,7 +11,7 @@
 #endif  // if/else WIN32/UNIX
 
 
-// BUILD: (assumes "normApi.h" in "include" ...
+// BUILD: (assumes "norm.h" in "include" ...
 // g++ -I../include -o normClient normClient.cpp  normSocket.cpp ../lib/libnorm.a ../protolib/lib/libprotokit.a -lresolv 
 
 

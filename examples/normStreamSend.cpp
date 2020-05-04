@@ -20,7 +20,7 @@
 //  1) A series of text messages are sent over a stream
 
 
-#include "normApi.h"     // for NORM API
+#include "norm.h"     // for NORM API
 
 #include <stdio.h>       // for printf(), etc
 #include <stdlib.h>      // for srand()

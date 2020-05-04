@@ -47,7 +47,7 @@
 typedef SSIZE_T ssize_t;
 #endif // WIN32
 
-#include "normApi.h"
+#include "norm.h"
 
 typedef const void* NormSocketHandle;
 

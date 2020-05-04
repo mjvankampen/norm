@@ -1,5 +1,5 @@
 
-#include "normSocket.h"
+#include "norm/normSocket.h"
 #include <stdio.h>  // for stderr
 #include <assert.h> // for assert()
 #include <string.h>  // for strlen()
@@ -14,7 +14,7 @@
 #include <arpa/inet.h>  // for inet_ntoa() (TBD - change to use Protolib routines?)
 #endif // if/else WIN32/UNIX
 
-// COMPILE: (assumes "normApi.h" in "include" ...
+// COMPILE: (assumes "norm.h" in "include" ...
 // g++ -I../include -c normSocket.cpp 
 
 #define TRACE(...) fprintf(stderr, __VA_ARGS__)

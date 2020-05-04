@@ -23,7 +23,7 @@ g++ -o normFileRecv normFileRecv.cpp -D_FILE_OFFSET_BITS=64 -I../common/ \
 //  3) The program also will exit on <CTRL-C> from user
 //  4) "normFileRecv" should be started before "normFileSend"
 
-#include "normApi.h"     // for NORM API
+#include "norm.h"     // for NORM API
 
 #include "protokit/protoDefs.h"   // for ProtoSystemTime        
 #include "protokit/protoDebug.h"  // for SetDebugLevel(), etc   
