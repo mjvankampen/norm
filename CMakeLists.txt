@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.1)
+cmake_minimum_required(VERSION 3.11)
 
 # set the project name
 project(norm)
@@ -37,7 +37,7 @@ list(APPEND PUBLIC_HEADER_FILES
             include/norm/normSession.h
             include/norm/normSimAgent.h
             include/norm/normVersion.h
-            include/norm.h
+            include/norm/norm.h
 )
 
 # List platform-independent source files
@@ -111,7 +111,7 @@ if(BUILD_EXAMPLES)
 
     foreach(example ${examples})
         add_executable(${example} examples/${example}.cpp examples/normSocket.cpp)
-        target_link_libraries(${example} PRIVATE norm protolib::protolib)
+        target_link_libraries(${example} PRIVATE norm protokit::protokit)
     endforeach()
 endif()
 
